@@ -37,11 +37,11 @@ def main():
     edges_in  = in_dir / "edges.parquet"
     nodes_out = out_dir / "nodes.parquet"
 
-    # 1) Copier nodes.parquet tel quel
+    # 1) Copier nodes.parquet comme ils sont
     shutil.copy2(nodes_in, nodes_out)
     print(f"[silver] nodes copied: {nodes_in} -> {nodes_out}")
 
-    # 2) Lire edges et ajouter une colonne shard (modulo sur 'src' pour distribuer)
+    # 2) Lire edges et ajouter une colonne shard (modulo sur 'SRC' pour distribuer)
     df_edges = pd.read_parquet(edges_in)
     n = args.partitions
     df_edges["shard"] = (df_edges["src"] % n).astype("int64")
@@ -57,5 +57,6 @@ def main():
 
     print("[silver] done")
 
+# Exécution principale
 if __name__ == "__main__":
     main()
