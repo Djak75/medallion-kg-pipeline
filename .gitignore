@@ -12,3 +12,7 @@ __pycache__/
 
 # Artifacts de données lourds
 *.parquet
+
+# Env local
+.env
+.venv/

@@ -1,0 +1,48 @@
+Metadata-Version: 2.3
+Name: filesystems
+Version: 2024.8.1
+Summary: A filesystem abstraction layer
+Project-URL: Homepage, https://github.com/Julian/filesystems
+Project-URL: Issues, https://github.com/Julian/filesystems/issues
+Project-URL: Funding, https://github.com/sponsors/Julian
+Project-URL: Source, https://github.com/Julian/filesystems
+Author-email: Julian Berman <Julian+filesystems@GrayVines.com>
+License-File: COPYING
+Keywords: filesystem
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: attrs>=24.1.0
+Requires-Dist: pyrsistent
+Requires-Dist: zope-interface
+Provides-Extra: click
+Requires-Dist: click; extra == 'click'
+Description-Content-Type: text/x-rst
+
+===========
+Filesystems
+===========
+
+|PyPI| |Pythons| |CI|
+
+.. |PyPI| image:: https://img.shields.io/pypi/v/filesystems.svg
+   :alt: PyPI version
+   :target: https://pypi.python.org/pypi/filesystems
+
+.. |Pythons| image:: https://img.shields.io/pypi/pyversions/filesystems.svg
+   :alt: Supported Python versions
+   :target: https://pypi.python.org/pypi/filesystems
+
+.. |CI| image:: https://github.com/Julian/Filesystems/workflows/CI/badge.svg
+  :alt: Build status
+  :target: https://github.com/Julian/Filesystems/actions?query=workflow%3ACI
