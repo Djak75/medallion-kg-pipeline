@@ -51,6 +51,7 @@ services:
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
       - AIRFLOW_UID=50000
+      - KG_PIPELINE_DATA_DIR=/opt/airflow/data
     user: "50000:0"
     volumes:
       - ./dags:/opt/airflow/dags
@@ -80,6 +81,7 @@ services:
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
       - AIRFLOW_UID=50000
+      - KG_PIPELINE_DATA_DIR=/opt/airflow/data
     user: "50000:0"
     volumes:
       - ./dags:/opt/airflow/dags
@@ -88,6 +90,7 @@ services:
       - ./data:/opt/airflow/data
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      
     command: >
       bash -lc "
       pip install pandas pyarrow neo4j 'great_expectations==0.13.49' 'jinja2<3.1' &&

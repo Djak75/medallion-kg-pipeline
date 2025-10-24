@@ -1,0 +1,37 @@
+[2025-10-24T14:29:44.138+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-24T14:29:44.164+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ingest_kg.bronze_to_parquet manual__2025-10-24T14:29:43.314232+00:00 [queued]>
+[2025-10-24T14:29:44.168+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ingest_kg.bronze_to_parquet manual__2025-10-24T14:29:43.314232+00:00 [queued]>
+[2025-10-24T14:29:44.168+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-24T14:29:44.175+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): bronze_to_parquet> on 2025-10-24 14:29:43.314232+00:00
+[2025-10-24T14:29:44.198+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=12883) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-24T14:29:44.196+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ingest_kg', 'bronze_to_parquet', 'manual__2025-10-24T14:29:43.314232+00:00', '--job-id', '312', '--raw', '--subdir', 'DAGS_FOLDER/ingest_kg.py', '--cfg-path', '/tmp/tmp3_u3dik4']
+[2025-10-24T14:29:44.199+0000] {standard_task_runner.py:64} INFO - Started process 12884 to run task
+[2025-10-24T14:29:44.199+0000] {standard_task_runner.py:91} INFO - Job 312: Subtask bronze_to_parquet
+[2025-10-24T14:29:44.237+0000] {task_command.py:426} INFO - Running <TaskInstance: ingest_kg.bronze_to_parquet manual__2025-10-24T14:29:43.314232+00:00 [running]> on host 1103adfde675
+[2025-10-24T14:29:44.300+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ingest_kg' AIRFLOW_CTX_TASK_ID='bronze_to_parquet' AIRFLOW_CTX_EXECUTION_DATE='2025-10-24T14:29:43.314232+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-24T14:29:43.314232+00:00'
+[2025-10-24T14:29:44.301+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-24T14:29:44.310+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-24T14:29:44.311+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/to_parquet.py']
+[2025-10-24T14:29:44.317+0000] {subprocess.py:86} INFO - Output:
+[2025-10-24T14:29:44.832+0000] {subprocess.py:93} INFO - [ERREUR] Fichier introuvable : data/raw/nodes.csv
+[2025-10-24T14:29:44.869+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-10-24T14:29:44.869+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-24T14:29:44.881+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-10-24T14:29:44.883+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=ingest_kg, task_id=bronze_to_parquet, run_id=manual__2025-10-24T14:29:43.314232+00:00, execution_date=20251024T142943, start_date=20251024T142944, end_date=20251024T142944
+[2025-10-24T14:29:44.890+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 312 for task bronze_to_parquet (Bash command failed. The command returned a non-zero exit code 1.; 12884)
+[2025-10-24T14:29:44.919+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-10-24T14:29:44.931+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-24T14:29:44.933+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,57 +1,59 @@
 """
-On partitionne les edges en 8 shards (Silver) et copie les nodes tels quels.
+On partitionne les edges en plusieurs shards (Silver) et on copie les nodes
 
-Entrée  (Bronze) : data/bronze/nodes.parquet, data/bronze/edges.parquet
-Sortie  (Silver) : data/silver/nodes.parquet, data/silver/shard=.../edges.parquet
+Entrées (Bronze) :
+  data/bronze/nodes.parquet
+  data/bronze/edges.parquet
 
-Usage :
-  python scripts/partition_edges.py --in data/bronze --out data/silver --partitions 8
+Sorties (Silver) :
+  data/silver/nodes.parquet
+  data/silver/shard=0/edges.parquet
+  ...
+  data/silver/shard=7/edges.parquet
 """
 
-import argparse
 from pathlib import Path
 import shutil
 import pandas as pd
+import os
 
-# --- Arguments en ligne de commande ---
-parser = argparse.ArgumentParser(description="Silver : partitionner les edges et copier les nodes")
-parser.add_argument("--in",  dest="in_dir",  default="data/bronze", help="Dossier d'entrée (Bronze)")
-parser.add_argument("--out", dest="out_dir", default="data/silver", help="Dossier de sortie (Silver)")
-parser.add_argument("--partitions", type=int, default=8, help="Nombre de shards (par défaut : 8)")
-args = parser.parse_args()
+# Paramètres
+DATA_DIR = Path(os.getenv("KG_PIPELINE_DATA_DIR", "data"))
+IN_DIR = DATA_DIR / "bronze"
+OUT_DIR = DATA_DIR / "silver"
+N_PARTITIONS = 8   # nombre de shards
 
-in_dir  = Path(args.in_dir)
-out_dir = Path(args.out_dir)
-out_dir.mkdir(parents=True, exist_ok=True)
 
-# --- Chemins utiles ---
-nodes_in  = in_dir / "nodes.parquet"
-edges_in  = in_dir / "edges.parquet"
-nodes_out = out_dir / "nodes.parquet"
+def main():
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# 1- On copie les nodes de Bronze -> Silver
-shutil.copy2(nodes_in, nodes_out)
-print(f"[silver] nodes copiés : {nodes_in} -> {nodes_out}")
+    # On copie les nodes comme ils sont
+    nodes_in = IN_DIR / "nodes.parquet"
+    nodes_out = OUT_DIR / "nodes.parquet"
+    shutil.copy2(nodes_in, nodes_out)
+    print(f"[silver] nodes copiés : {nodes_in} -> {nodes_out}")
 
-# 2- On lit les edges et on calcule un numéro de shard
-#    Règle simple : on distribue par (src % N) pour une répartition stable.
-df_edges = pd.read_parquet(edges_in)
-n = int(args.partitions)
-df_edges["shard"] = (df_edges["src"] % n).astype("int64")
+    # On partitionne les edges par shard
+    edges_in = IN_DIR / "edges.parquet"
+    df_edges = pd.read_parquet(edges_in)
+    df_edges["shard"] = df_edges["src"] % N_PARTITIONS
 
-# 3- Écrire un fichier Parquet par shard
-#    Structure : data/silver/shard=0/edges.parquet, ..., shard=N-1/edges.parquet
-total = 0
-for s in range(n):
-    shard_dir = out_dir / f"shard={s}"
-    shard_dir.mkdir(parents=True, exist_ok=True)
-    shard_path = shard_dir / "edges.parquet"
+    total = 0
+    # On écrit chaque shard dans son dossier
+    for s in range(N_PARTITIONS):
+        shard_dir = OUT_DIR / f"shard={s}"
+        shard_dir.mkdir(parents=True, exist_ok=True)
+        shard_path = shard_dir / "edges.parquet"
 
-    part = df_edges[df_edges["shard"] == s].drop(columns=["shard"])
-    part.to_parquet(shard_path, index=False)
-    total += len(part)
+        part = df_edges[df_edges["shard"] == s].drop(columns=["shard"])
+        part.to_parquet(shard_path, index=False)
+        total += len(part)
 
-    print(f"[silver] shard {s} -> {shard_path} ({len(part)} lignes)")
+        print(f"[silver] shard {s} -> {shard_path} ({len(part):,} lignes)")
 
-print(f"[silver] total edges répartis : {total}")
-print("[silver] terminé")
+    print(f"[silver] total edges répartis : {total:,}")
+    print("[silver] terminé")
+
+
+if __name__ == "__main__":
+    main()

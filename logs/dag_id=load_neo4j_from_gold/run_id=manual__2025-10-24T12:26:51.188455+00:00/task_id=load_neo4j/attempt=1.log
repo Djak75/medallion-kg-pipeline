@@ -13,3 +13,12 @@
 [2025-10-24T12:26:51.935+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
 [2025-10-24T12:26:51.936+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/load_neo4j_from_gold.py --uri bolt://kg_neo4j:7687 --nodes /opt/***/data/gold/nodes.csv --edges /opt/***/data/gold/edges.csv --batch 20000']
 [2025-10-24T12:26:51.941+0000] {subprocess.py:86} INFO - Output:
+[2025-10-24T12:41:05.786+0000] {subprocess.py:93} INFO - [neo4j] nodes chargés OK
+[2025-10-24T12:41:05.815+0000] {subprocess.py:93} INFO - [neo4j] edges chargés ✔
+[2025-10-24T12:41:05.819+0000] {subprocess.py:93} INFO - [neo4j] résumé : 1000000 nœuds, 4999988 relations
+[2025-10-24T12:41:06.147+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-24T12:41:06.162+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-24T12:41:06.348+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=load_neo4j_from_gold, task_id=load_neo4j, run_id=manual__2025-10-24T12:26:51.188455+00:00, execution_date=20251024T122651, start_date=20251024T122651, end_date=20251024T124106
+[2025-10-24T12:41:06.424+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-24T12:41:06.467+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-24T12:41:06.468+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

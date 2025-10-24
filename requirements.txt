@@ -1,0 +1,5 @@
+pandas
+pyarrow
+great_expectations==0.13.49
+jinja2<3.1
+neo4j

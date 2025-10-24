@@ -1,0 +1,87 @@
+[2025-10-24T15:17:36.195+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-24T15:17:36.210+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.load_neo4j manual__2025-10-24T15:17:35.786344+00:00 [queued]>
+[2025-10-24T15:17:36.213+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.load_neo4j manual__2025-10-24T15:17:35.786344+00:00 [queued]>
+[2025-10-24T15:17:36.213+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-24T15:17:36.219+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): load_neo4j> on 2025-10-24 15:17:35.786344+00:00
+[2025-10-24T15:17:36.223+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'load_neo4j', 'manual__2025-10-24T15:17:35.786344+00:00', '--job-id', '324', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpgpv7kdvz']
+[2025-10-24T15:17:36.224+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=309) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-24T15:17:36.224+0000] {standard_task_runner.py:91} INFO - Job 324: Subtask load_neo4j
+[2025-10-24T15:17:36.224+0000] {standard_task_runner.py:64} INFO - Started process 310 to run task
+[2025-10-24T15:17:36.248+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.load_neo4j manual__2025-10-24T15:17:35.786344+00:00 [running]> on host 686d193542d0
+[2025-10-24T15:17:36.290+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='load_neo4j' AIRFLOW_CTX_EXECUTION_DATE='2025-10-24T15:17:35.786344+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-24T15:17:35.786344+00:00'
+[2025-10-24T15:17:36.291+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-24T15:17:36.297+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-24T15:17:36.298+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/load_neo4j_from_gold.py']
+[2025-10-24T15:17:36.302+0000] {subprocess.py:86} INFO - Output:
+[2025-10-24T15:17:36.839+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-10-24T15:17:36.840+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_async_compat/network/_bolt_socket.py", line 498, in _connect_secure
+[2025-10-24T15:17:36.840+0000] {subprocess.py:93} INFO -     s.connect(resolved_address)
+[2025-10-24T15:17:36.840+0000] {subprocess.py:93} INFO - ConnectionRefusedError: [Errno 111] Connection refused
+[2025-10-24T15:17:36.840+0000] {subprocess.py:93} INFO - 
+[2025-10-24T15:17:36.840+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO - 
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_sync/io/_bolt_socket.py", line 329, in connect
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO -     s = cls._connect_secure(
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO -         ^^^^^^^^^^^^^^^^^^^^
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_async_compat/network/_bolt_socket.py", line 521, in _connect_secure
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO -     raise ServiceUnavailable(
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO - neo4j.exceptions.ServiceUnavailable: Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 111] Connection refused)
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO - 
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO - 
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-10-24T15:17:36.841+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/load_neo4j_from_gold.py", line 118, in <module>
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -     main()
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/load_neo4j_from_gold.py", line 105, in main
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -     create_constraint(session)
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/load_neo4j_from_gold.py", line 34, in create_constraint
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -     session.run("""
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_sync/work/session.py", line 305, in run
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -     self._connect(self._config.default_access_mode)
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_sync/work/session.py", line 126, in _connect
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -     super()._connect(
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_sync/work/workspace.py", line 181, in _connect
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -     self._connection = self._pool.acquire(**acquire_kwargs_)
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_sync/io/_pool.py", line 678, in acquire
+[2025-10-24T15:17:36.842+0000] {subprocess.py:93} INFO -     return self._acquire(
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_sync/io/_pool.py", line 418, in _acquire
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -     return connection_creator()
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_sync/io/_pool.py", line 231, in connection_creator
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -     connection = self.opener(
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -                  ^^^^^^^^^^^^
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_sync/io/_pool.py", line 638, in opener
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -     return Bolt.open(
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_sync/io/_bolt.py", line 367, in open
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -     s, protocol_version = BoltSocket.connect(
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -                           ^^^^^^^^^^^^^^^^^^^
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/neo4j/_sync/io/_bolt_socket.py", line 376, in connect
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO -     raise ServiceUnavailable(
+[2025-10-24T15:17:36.843+0000] {subprocess.py:93} INFO - neo4j.exceptions.ServiceUnavailable: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+[2025-10-24T15:17:36.844+0000] {subprocess.py:93} INFO - Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 111] Connection refused)
+[2025-10-24T15:17:36.844+0000] {subprocess.py:93} INFO - Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused)
+[2025-10-24T15:17:36.884+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-10-24T15:17:36.884+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-24T15:17:36.893+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-10-24T15:17:36.896+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=load_neo4j_from_gold, task_id=load_neo4j, run_id=manual__2025-10-24T15:17:35.786344+00:00, execution_date=20251024T151735, start_date=20251024T151736, end_date=20251024T151736
+[2025-10-24T15:17:36.902+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 324 for task load_neo4j (Bash command failed. The command returned a non-zero exit code 1.; 310)
+[2025-10-24T15:17:36.910+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-10-24T15:17:36.920+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-24T15:17:36.921+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
