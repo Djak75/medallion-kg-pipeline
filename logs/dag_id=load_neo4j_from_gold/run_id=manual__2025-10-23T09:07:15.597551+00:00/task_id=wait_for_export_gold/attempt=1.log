@@ -1,0 +1,320 @@
+[2025-10-23T09:07:17.409+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:07:17.430+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:07:17.435+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:07:17.435+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:07:17.443+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:07:17.448+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2144) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:07:17.448+0000] {standard_task_runner.py:64} INFO - Started process 2156 to run task
+[2025-10-23T09:07:17.448+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '126', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpeeiurs28']
+[2025-10-23T09:07:17.449+0000] {standard_task_runner.py:91} INFO - Job 126: Subtask wait_for_export_gold
+[2025-10-23T09:07:17.483+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:07:17.538+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:07:17.539+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:07:17.548+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:07:17.556+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:07:17.558+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:07:17.568+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:07:17.580+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:07:17.588+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:07:17.607+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:07:17.608+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:07:48.057+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:07:48.073+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:07:48.077+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:07:48.077+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:07:48.083+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:07:48.086+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2244) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:07:48.087+0000] {standard_task_runner.py:64} INFO - Started process 2245 to run task
+[2025-10-23T09:07:48.086+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '139', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpuim5vbor']
+[2025-10-23T09:07:48.087+0000] {standard_task_runner.py:91} INFO - Job 139: Subtask wait_for_export_gold
+[2025-10-23T09:07:48.112+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:07:48.156+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:07:48.156+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:07:48.163+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:07:48.169+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:07:48.170+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:07:48.176+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:07:48.186+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:07:48.229+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:07:48.242+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:07:48.243+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:08:18.611+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:08:18.629+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:08:18.633+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:08:18.633+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:08:18.639+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:08:18.643+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '149', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpege7a9wb']
+[2025-10-23T09:08:18.644+0000] {standard_task_runner.py:91} INFO - Job 149: Subtask wait_for_export_gold
+[2025-10-23T09:08:18.644+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2274) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:08:18.645+0000] {standard_task_runner.py:64} INFO - Started process 2275 to run task
+[2025-10-23T09:08:18.675+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:08:18.727+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:08:18.728+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:08:18.734+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:08:18.739+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:08:18.740+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:08:18.747+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:08:18.757+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:08:18.785+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:08:18.798+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:08:18.799+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:08:49.108+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:08:49.128+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:08:49.132+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:08:49.132+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:08:49.138+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:08:49.146+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '159', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmp2l_2yiuo']
+[2025-10-23T09:08:49.150+0000] {standard_task_runner.py:91} INFO - Job 159: Subtask wait_for_export_gold
+[2025-10-23T09:08:49.150+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2304) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:08:49.150+0000] {standard_task_runner.py:64} INFO - Started process 2305 to run task
+[2025-10-23T09:08:49.182+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:08:49.257+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:08:49.259+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:08:49.270+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:08:49.280+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:08:49.281+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:08:49.292+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:08:49.312+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:08:49.333+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:08:49.350+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:08:49.351+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:09:19.617+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:09:19.639+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:09:19.643+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:09:19.643+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:09:19.649+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:09:19.655+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2334) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:09:19.654+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '169', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpt2j5jmhu']
+[2025-10-23T09:09:19.656+0000] {standard_task_runner.py:64} INFO - Started process 2335 to run task
+[2025-10-23T09:09:19.657+0000] {standard_task_runner.py:91} INFO - Job 169: Subtask wait_for_export_gold
+[2025-10-23T09:09:19.706+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:09:19.757+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:09:19.758+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:09:19.765+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:09:19.771+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:09:19.773+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:09:19.780+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:09:19.791+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:09:19.795+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:09:19.809+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:09:19.809+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:09:50.000+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:09:50.016+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:09:50.019+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:09:50.019+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:09:50.025+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:09:50.030+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2364) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:09:50.029+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '179', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpzme55e_u']
+[2025-10-23T09:09:50.030+0000] {standard_task_runner.py:64} INFO - Started process 2365 to run task
+[2025-10-23T09:09:50.030+0000] {standard_task_runner.py:91} INFO - Job 179: Subtask wait_for_export_gold
+[2025-10-23T09:09:50.055+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:09:50.096+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:09:50.097+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:09:50.103+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:09:50.109+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:09:50.111+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:09:50.122+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:09:50.136+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:09:50.171+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:09:50.184+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:09:50.185+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:10:20.470+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:10:20.485+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:10:20.489+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:10:20.489+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:10:20.495+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:10:20.499+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpcm49113v']
+[2025-10-23T09:10:20.500+0000] {standard_task_runner.py:91} INFO - Job 189: Subtask wait_for_export_gold
+[2025-10-23T09:10:20.500+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2394) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:10:20.501+0000] {standard_task_runner.py:64} INFO - Started process 2395 to run task
+[2025-10-23T09:10:20.544+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:10:20.587+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:10:20.588+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:10:20.595+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:10:20.600+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:10:20.602+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:10:20.609+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:10:20.619+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:10:20.641+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:10:20.653+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:10:20.654+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:10:51.112+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:10:51.133+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:10:51.136+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:10:51.137+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:10:51.143+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:10:51.148+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2424) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:10:51.148+0000] {standard_task_runner.py:64} INFO - Started process 2425 to run task
+[2025-10-23T09:10:51.147+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '199', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpfutapc_z']
+[2025-10-23T09:10:51.149+0000] {standard_task_runner.py:91} INFO - Job 199: Subtask wait_for_export_gold
+[2025-10-23T09:10:51.187+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:10:51.233+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:10:51.234+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:10:51.241+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:10:51.247+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:10:51.248+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:10:51.255+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:10:51.266+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:10:51.289+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:10:51.314+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:10:51.314+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:11:21.785+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:11:21.800+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:11:21.803+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:11:21.803+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:11:21.809+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:11:21.812+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2454) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:11:21.813+0000] {standard_task_runner.py:64} INFO - Started process 2455 to run task
+[2025-10-23T09:11:21.812+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '209', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpy_iyoitt']
+[2025-10-23T09:11:21.813+0000] {standard_task_runner.py:91} INFO - Job 209: Subtask wait_for_export_gold
+[2025-10-23T09:11:21.837+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:11:21.878+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:11:21.879+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:11:21.885+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:11:21.890+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:11:21.891+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:11:21.898+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:11:21.908+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:11:21.953+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:11:21.965+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:11:21.966+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:11:53.075+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:11:53.091+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:11:53.094+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:11:53.094+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:11:53.100+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:11:53.103+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2484) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:11:53.104+0000] {standard_task_runner.py:64} INFO - Started process 2485 to run task
+[2025-10-23T09:11:53.103+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '219', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmp3mu2zhqf']
+[2025-10-23T09:11:53.105+0000] {standard_task_runner.py:91} INFO - Job 219: Subtask wait_for_export_gold
+[2025-10-23T09:11:53.133+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:11:53.186+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:11:53.187+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:11:53.194+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:11:53.199+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:11:53.200+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:11:53.207+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:11:53.218+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:11:53.244+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:11:53.257+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:11:53.257+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:12:24.356+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:12:24.371+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:12:24.374+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:12:24.374+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:12:24.380+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:12:24.384+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2514) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:12:24.385+0000] {standard_task_runner.py:64} INFO - Started process 2515 to run task
+[2025-10-23T09:12:24.384+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '229', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpx3tfw90_']
+[2025-10-23T09:12:24.385+0000] {standard_task_runner.py:91} INFO - Job 229: Subtask wait_for_export_gold
+[2025-10-23T09:12:24.410+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:12:24.465+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:12:24.466+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:12:24.474+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:12:24.480+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:12:24.482+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:12:24.491+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:12:24.504+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:12:24.526+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:12:24.544+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:12:24.545+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:12:55.876+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:12:55.903+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:12:55.907+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:12:55.908+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:12:55.915+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:12:55.922+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2546) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:12:55.923+0000] {standard_task_runner.py:64} INFO - Started process 2547 to run task
+[2025-10-23T09:12:55.924+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '241', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmp202_rrr9']
+[2025-10-23T09:12:55.927+0000] {standard_task_runner.py:91} INFO - Job 241: Subtask wait_for_export_gold
+[2025-10-23T09:12:55.988+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:12:56.073+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:12:56.074+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:12:56.082+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:12:56.088+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:12:56.089+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:12:56.097+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:12:56.108+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:12:56.112+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:12:56.127+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:12:56.127+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:13:26.331+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:13:26.349+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:13:26.353+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:13:26.354+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:13:26.361+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:13:26.365+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2576) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:13:26.366+0000] {standard_task_runner.py:64} INFO - Started process 2579 to run task
+[2025-10-23T09:13:26.365+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '251', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmp287y55xk']
+[2025-10-23T09:13:26.367+0000] {standard_task_runner.py:91} INFO - Job 251: Subtask wait_for_export_gold
+[2025-10-23T09:13:26.396+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:13:26.462+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:13:26.463+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:13:26.470+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:13:26.476+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:13:26.477+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:13:26.486+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:13:26.499+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:13:26.502+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:13:26.516+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:13:26.517+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:13:56.694+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:13:56.721+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:13:56.727+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:13:56.728+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:13:56.735+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:13:56.740+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2606) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:13:56.739+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '261', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpasmcuwev']
+[2025-10-23T09:13:56.740+0000] {standard_task_runner.py:64} INFO - Started process 2609 to run task
+[2025-10-23T09:13:56.740+0000] {standard_task_runner.py:91} INFO - Job 261: Subtask wait_for_export_gold
+[2025-10-23T09:13:56.779+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:13:56.836+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:13:56.837+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:13:56.845+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:13:56.852+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:13:56.853+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:13:56.863+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:13:56.874+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:13:56.882+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:13:56.895+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:13:56.895+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:14:27.270+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:14:27.296+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:14:27.302+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:14:27.302+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:14:27.315+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:14:27.334+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2636) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:14:27.338+0000] {standard_task_runner.py:64} INFO - Started process 2638 to run task
+[2025-10-23T09:14:27.332+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '271', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmpjw5vwbl9']
+[2025-10-23T09:14:27.341+0000] {standard_task_runner.py:91} INFO - Job 271: Subtask wait_for_export_gold
+[2025-10-23T09:14:27.388+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:14:27.455+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:14:27.456+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:14:27.466+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:14:27.473+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:14:27.474+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:14:27.484+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:14:27.496+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:14:27.519+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:14:27.533+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:14:27.533+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-10-23T09:14:57.758+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-23T09:14:57.801+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:14:57.846+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [queued]>
+[2025-10-23T09:14:57.849+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-23T09:14:57.907+0000] {taskinstance.py:2330} INFO - Executing <Task(ExternalTaskSensor): wait_for_export_gold> on 2025-10-23 09:07:15.597551+00:00
+[2025-10-23T09:14:57.943+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=2664) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-23T09:14:57.945+0000] {standard_task_runner.py:64} INFO - Started process 2668 to run task
+[2025-10-23T09:14:57.943+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_neo4j_from_gold', 'wait_for_export_gold', 'manual__2025-10-23T09:07:15.597551+00:00', '--job-id', '281', '--raw', '--subdir', 'DAGS_FOLDER/load_neo4j_from_gold.py', '--cfg-path', '/tmp/tmp77rh90se']
+[2025-10-23T09:14:57.947+0000] {standard_task_runner.py:91} INFO - Job 281: Subtask wait_for_export_gold
+[2025-10-23T09:14:58.007+0000] {task_command.py:426} INFO - Running <TaskInstance: load_neo4j_from_gold.wait_for_export_gold manual__2025-10-23T09:07:15.597551+00:00 [running]> on host c48d41bd1c66
+[2025-10-23T09:14:58.103+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_neo4j_from_gold' AIRFLOW_CTX_TASK_ID='wait_for_export_gold' AIRFLOW_CTX_EXECUTION_DATE='2025-10-23T09:07:15.597551+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-23T09:07:15.597551+00:00'
+[2025-10-23T09:14:58.105+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-23T09:14:58.118+0000] {baseoperator.py:400} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-10-23T09:14:58.126+0000] {external_task.py:258} INFO - Poking for tasks ['export_gold_csv'] in dag ingest_kg on 2025-10-23T09:07:15.597551+00:00 ... 
+[2025-10-23T09:14:58.128+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:79 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-10-23T09:14:58.136+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-23T09:14:58.154+0000] {taskinstance.py:2865} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-10-23T09:14:58.167+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-23T09:14:58.182+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-23T09:14:58.183+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

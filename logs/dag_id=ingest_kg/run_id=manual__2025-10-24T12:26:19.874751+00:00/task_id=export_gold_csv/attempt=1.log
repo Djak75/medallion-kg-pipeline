@@ -1,0 +1,32 @@
+[2025-10-24T12:26:43.857+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-24T12:26:43.878+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ingest_kg.export_gold_csv manual__2025-10-24T12:26:19.874751+00:00 [queued]>
+[2025-10-24T12:26:43.883+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ingest_kg.export_gold_csv manual__2025-10-24T12:26:19.874751+00:00 [queued]>
+[2025-10-24T12:26:43.883+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-24T12:26:43.889+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): export_gold_csv> on 2025-10-24 12:26:19.874751+00:00
+[2025-10-24T12:26:43.896+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=10358) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-10-24T12:26:43.894+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ingest_kg', 'export_gold_csv', 'manual__2025-10-24T12:26:19.874751+00:00', '--job-id', '308', '--raw', '--subdir', 'DAGS_FOLDER/ingest_kg.py', '--cfg-path', '/tmp/tmpqivoqhhg']
+[2025-10-24T12:26:43.896+0000] {standard_task_runner.py:64} INFO - Started process 10359 to run task
+[2025-10-24T12:26:43.896+0000] {standard_task_runner.py:91} INFO - Job 308: Subtask export_gold_csv
+[2025-10-24T12:26:43.935+0000] {task_command.py:426} INFO - Running <TaskInstance: ingest_kg.export_gold_csv manual__2025-10-24T12:26:19.874751+00:00 [running]> on host 1103adfde675
+[2025-10-24T12:26:43.982+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ingest_kg' AIRFLOW_CTX_TASK_ID='export_gold_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-10-24T12:26:19.874751+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-24T12:26:19.874751+00:00'
+[2025-10-24T12:26:43.983+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-24T12:26:43.992+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-10-24T12:26:43.992+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/export_gold_csv.py --silver /opt/***/data/silver --gold /opt/***/data/gold --partitions 8']
+[2025-10-24T12:26:43.998+0000] {subprocess.py:86} INFO - Output:
+[2025-10-24T12:26:50.153+0000] {subprocess.py:93} INFO - [gold] nodes : /opt/***/data/silver/nodes.parquet -> /opt/***/data/gold/nodes.csv (1000000 lignes)
+[2025-10-24T12:26:50.164+0000] {subprocess.py:93} INFO - [gold] shard 0 -> edges.csv (624591 lignes)
+[2025-10-24T12:26:50.165+0000] {subprocess.py:93} INFO - [gold] shard 1 -> edges.csv (625548 lignes)
+[2025-10-24T12:26:50.166+0000] {subprocess.py:93} INFO - [gold] shard 2 -> edges.csv (624992 lignes)
+[2025-10-24T12:26:50.167+0000] {subprocess.py:93} INFO - [gold] shard 3 -> edges.csv (625910 lignes)
+[2025-10-24T12:26:50.167+0000] {subprocess.py:93} INFO - [gold] shard 4 -> edges.csv (624992 lignes)
+[2025-10-24T12:26:50.167+0000] {subprocess.py:93} INFO - [gold] shard 5 -> edges.csv (625339 lignes)
+[2025-10-24T12:26:50.167+0000] {subprocess.py:93} INFO - [gold] shard 6 -> edges.csv (624113 lignes)
+[2025-10-24T12:26:50.168+0000] {subprocess.py:93} INFO - [gold] shard 7 -> edges.csv (624515 lignes)
+[2025-10-24T12:26:50.169+0000] {subprocess.py:93} INFO - [gold] total edges écrits : 5000000
+[2025-10-24T12:26:50.170+0000] {subprocess.py:93} INFO - [gold] export terminé
+[2025-10-24T12:26:50.508+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-10-24T12:26:50.511+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-24T12:26:50.563+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ingest_kg, task_id=export_gold_csv, run_id=manual__2025-10-24T12:26:19.874751+00:00, execution_date=20251024T122619, start_date=20251024T122643, end_date=20251024T122650
+[2025-10-24T12:26:50.597+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-10-24T12:26:50.619+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-24T12:26:50.619+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
