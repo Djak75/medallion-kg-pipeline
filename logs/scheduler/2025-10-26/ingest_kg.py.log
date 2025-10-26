@@ -1867,3 +1867,80 @@
 [2025-10-26T10:36:45.642+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:36:45.642+0000] {dag.py:3089} INFO - Sync 1 DAGs
 [2025-10-26T10:36:45.658+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:36:45.657+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
 [2025-10-26T10:36:45.673+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.114 seconds
+[2025-10-26T10:37:16.066+0000] {processor.py:161} INFO - Started process (PID=6773) to work on /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:37:16.068+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingest_kg.py for tasks to queue
+[2025-10-26T10:37:16.071+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:16.071+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:37:16.086+0000] {processor.py:840} INFO - DAG(s) 'ingest_kg' retrieved from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:37:16.132+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:16.132+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:37:16.154+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:16.154+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
+[2025-10-26T10:37:16.171+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.125 seconds
+[2025-10-26T10:37:46.500+0000] {processor.py:161} INFO - Started process (PID=6783) to work on /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:37:46.501+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingest_kg.py for tasks to queue
+[2025-10-26T10:37:46.509+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:46.506+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:37:46.533+0000] {processor.py:840} INFO - DAG(s) 'ingest_kg' retrieved from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:37:46.593+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:46.593+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:37:46.608+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:46.608+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
+[2025-10-26T10:37:46.623+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.131 seconds
+[2025-10-26T10:38:17.076+0000] {processor.py:161} INFO - Started process (PID=6792) to work on /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:38:17.078+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingest_kg.py for tasks to queue
+[2025-10-26T10:38:17.082+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:17.082+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:38:17.099+0000] {processor.py:840} INFO - DAG(s) 'ingest_kg' retrieved from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:38:17.140+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:17.140+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:38:17.154+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:17.154+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
+[2025-10-26T10:38:17.169+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.104 seconds
+[2025-10-26T10:38:47.802+0000] {processor.py:161} INFO - Started process (PID=6803) to work on /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:38:47.804+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingest_kg.py for tasks to queue
+[2025-10-26T10:38:47.808+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:47.807+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:38:47.829+0000] {processor.py:840} INFO - DAG(s) 'ingest_kg' retrieved from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:38:47.878+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:47.877+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:38:47.896+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:47.896+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
+[2025-10-26T10:38:47.931+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.136 seconds
+[2025-10-26T10:39:18.641+0000] {processor.py:161} INFO - Started process (PID=6813) to work on /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:39:18.658+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingest_kg.py for tasks to queue
+[2025-10-26T10:39:18.673+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:18.669+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:39:18.758+0000] {processor.py:840} INFO - DAG(s) 'ingest_kg' retrieved from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:39:18.825+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:18.825+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:39:18.838+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:18.838+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
+[2025-10-26T10:39:18.853+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.258 seconds
+[2025-10-26T10:39:49.293+0000] {processor.py:161} INFO - Started process (PID=6823) to work on /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:39:49.300+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingest_kg.py for tasks to queue
+[2025-10-26T10:39:49.306+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:49.305+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:39:49.324+0000] {processor.py:840} INFO - DAG(s) 'ingest_kg' retrieved from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:39:49.359+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:49.359+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:39:49.381+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:49.381+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
+[2025-10-26T10:39:49.408+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.129 seconds
+[2025-10-26T10:40:19.774+0000] {processor.py:161} INFO - Started process (PID=6833) to work on /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:40:19.778+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingest_kg.py for tasks to queue
+[2025-10-26T10:40:19.795+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:19.792+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:40:19.828+0000] {processor.py:840} INFO - DAG(s) 'ingest_kg' retrieved from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:40:19.871+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:19.871+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:40:19.885+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:19.885+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
+[2025-10-26T10:40:19.897+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.137 seconds
+[2025-10-26T10:40:50.388+0000] {processor.py:161} INFO - Started process (PID=6843) to work on /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:40:50.390+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingest_kg.py for tasks to queue
+[2025-10-26T10:40:50.394+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:50.394+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:40:50.421+0000] {processor.py:840} INFO - DAG(s) 'ingest_kg' retrieved from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:40:50.475+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:50.475+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:40:50.490+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:50.490+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
+[2025-10-26T10:40:50.505+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.127 seconds
+[2025-10-26T10:41:20.968+0000] {processor.py:161} INFO - Started process (PID=6853) to work on /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:41:20.971+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingest_kg.py for tasks to queue
+[2025-10-26T10:41:20.974+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:20.974+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:41:20.995+0000] {processor.py:840} INFO - DAG(s) 'ingest_kg' retrieved from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:41:21.027+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:21.027+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:41:21.053+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:21.053+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
+[2025-10-26T10:41:21.067+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.108 seconds
+[2025-10-26T10:41:51.551+0000] {processor.py:161} INFO - Started process (PID=6863) to work on /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:41:51.553+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingest_kg.py for tasks to queue
+[2025-10-26T10:41:51.556+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:51.556+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:41:51.583+0000] {processor.py:840} INFO - DAG(s) 'ingest_kg' retrieved from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:41:51.635+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:51.635+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:41:51.651+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:51.651+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
+[2025-10-26T10:41:51.677+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.135 seconds
+[2025-10-26T10:42:22.228+0000] {processor.py:161} INFO - Started process (PID=6872) to work on /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:42:22.230+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingest_kg.py for tasks to queue
+[2025-10-26T10:42:22.236+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:42:22.234+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:42:22.269+0000] {processor.py:840} INFO - DAG(s) 'ingest_kg' retrieved from /opt/airflow/dags/ingest_kg.py
+[2025-10-26T10:42:22.315+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:42:22.315+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:42:22.330+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:42:22.330+0000] {dag.py:3947} INFO - Setting next_dagrun for ingest_kg to None, run_after=None
+[2025-10-26T10:42:22.349+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingest_kg.py took 0.134 seconds

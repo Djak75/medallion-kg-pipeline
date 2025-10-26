@@ -1867,3 +1867,80 @@
 [2025-10-26T10:36:45.647+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:36:45.647+0000] {dag.py:3089} INFO - Sync 1 DAGs
 [2025-10-26T10:36:45.659+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:36:45.658+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
 [2025-10-26T10:36:45.673+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.129 seconds
+[2025-10-26T10:37:16.066+0000] {processor.py:161} INFO - Started process (PID=6770) to work on /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:37:16.068+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_neo4j_from_gold.py for tasks to queue
+[2025-10-26T10:37:16.071+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:16.071+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:37:16.086+0000] {processor.py:840} INFO - DAG(s) 'load_neo4j_from_gold' retrieved from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:37:16.132+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:16.132+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:37:16.154+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:16.154+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
+[2025-10-26T10:37:16.171+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.130 seconds
+[2025-10-26T10:37:46.498+0000] {processor.py:161} INFO - Started process (PID=6780) to work on /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:37:46.501+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_neo4j_from_gold.py for tasks to queue
+[2025-10-26T10:37:46.508+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:46.506+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:37:46.533+0000] {processor.py:840} INFO - DAG(s) 'load_neo4j_from_gold' retrieved from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:37:46.593+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:46.593+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:37:46.608+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:37:46.608+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
+[2025-10-26T10:37:46.623+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.138 seconds
+[2025-10-26T10:38:17.076+0000] {processor.py:161} INFO - Started process (PID=6790) to work on /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:38:17.078+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_neo4j_from_gold.py for tasks to queue
+[2025-10-26T10:38:17.082+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:17.082+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:38:17.099+0000] {processor.py:840} INFO - DAG(s) 'load_neo4j_from_gold' retrieved from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:38:17.140+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:17.140+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:38:17.154+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:17.154+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
+[2025-10-26T10:38:17.169+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.116 seconds
+[2025-10-26T10:38:47.801+0000] {processor.py:161} INFO - Started process (PID=6800) to work on /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:38:47.804+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_neo4j_from_gold.py for tasks to queue
+[2025-10-26T10:38:47.808+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:47.807+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:38:47.829+0000] {processor.py:840} INFO - DAG(s) 'load_neo4j_from_gold' retrieved from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:38:47.878+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:47.877+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:38:47.896+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:38:47.896+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
+[2025-10-26T10:38:47.940+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.151 seconds
+[2025-10-26T10:39:18.642+0000] {processor.py:161} INFO - Started process (PID=6810) to work on /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:39:18.659+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_neo4j_from_gold.py for tasks to queue
+[2025-10-26T10:39:18.689+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:18.681+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:39:18.829+0000] {processor.py:840} INFO - DAG(s) 'load_neo4j_from_gold' retrieved from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:39:18.932+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:18.932+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:39:18.947+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:18.947+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
+[2025-10-26T10:39:18.960+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.418 seconds
+[2025-10-26T10:39:49.290+0000] {processor.py:161} INFO - Started process (PID=6820) to work on /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:39:49.295+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_neo4j_from_gold.py for tasks to queue
+[2025-10-26T10:39:49.300+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:49.299+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:39:49.324+0000] {processor.py:840} INFO - DAG(s) 'load_neo4j_from_gold' retrieved from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:39:49.359+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:49.359+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:39:49.381+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:39:49.381+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
+[2025-10-26T10:39:49.408+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.130 seconds
+[2025-10-26T10:40:19.772+0000] {processor.py:161} INFO - Started process (PID=6830) to work on /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:40:19.775+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_neo4j_from_gold.py for tasks to queue
+[2025-10-26T10:40:19.781+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:19.780+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:40:19.811+0000] {processor.py:840} INFO - DAG(s) 'load_neo4j_from_gold' retrieved from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:40:19.861+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:19.861+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:40:19.878+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:19.878+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
+[2025-10-26T10:40:19.894+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.139 seconds
+[2025-10-26T10:40:50.388+0000] {processor.py:161} INFO - Started process (PID=6840) to work on /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:40:50.390+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_neo4j_from_gold.py for tasks to queue
+[2025-10-26T10:40:50.394+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:50.394+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:40:50.421+0000] {processor.py:840} INFO - DAG(s) 'load_neo4j_from_gold' retrieved from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:40:50.475+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:50.475+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:40:50.490+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:40:50.490+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
+[2025-10-26T10:40:50.505+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.140 seconds
+[2025-10-26T10:41:20.968+0000] {processor.py:161} INFO - Started process (PID=6850) to work on /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:41:20.971+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_neo4j_from_gold.py for tasks to queue
+[2025-10-26T10:41:20.974+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:20.974+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:41:20.994+0000] {processor.py:840} INFO - DAG(s) 'load_neo4j_from_gold' retrieved from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:41:21.027+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:21.027+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:41:21.054+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:21.053+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
+[2025-10-26T10:41:21.071+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.124 seconds
+[2025-10-26T10:41:51.551+0000] {processor.py:161} INFO - Started process (PID=6860) to work on /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:41:51.553+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_neo4j_from_gold.py for tasks to queue
+[2025-10-26T10:41:51.557+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:51.556+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:41:51.583+0000] {processor.py:840} INFO - DAG(s) 'load_neo4j_from_gold' retrieved from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:41:51.635+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:51.635+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:41:51.656+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:41:51.655+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
+[2025-10-26T10:41:51.691+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.154 seconds
+[2025-10-26T10:42:22.228+0000] {processor.py:161} INFO - Started process (PID=6870) to work on /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:42:22.230+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_neo4j_from_gold.py for tasks to queue
+[2025-10-26T10:42:22.235+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:42:22.234+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:42:22.269+0000] {processor.py:840} INFO - DAG(s) 'load_neo4j_from_gold' retrieved from /opt/airflow/dags/load_neo4j_from_gold.py
+[2025-10-26T10:42:22.315+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:42:22.315+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-10-26T10:42:22.330+0000] {logging_mixin.py:188} INFO - [2025-10-26T10:42:22.330+0000] {dag.py:3947} INFO - Setting next_dagrun for load_neo4j_from_gold to None, run_after=None
+[2025-10-26T10:42:22.350+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_neo4j_from_gold.py took 0.138 seconds

@@ -113,7 +113,7 @@ python quality/gx_checkpoint.py --nodes data/bronze/nodes.parquet --edges data/b
 ```
 (Pas dans le Makefile car utilisé diretement dans le DAG Airflow)
 
-### 4. ``partition_edges.py
+### 4. `partition_edges.py`
 - Partitionne les arêtes en ***N shards*** (par défaut 8).
 - Copie les nœuds sans modification.
 - Sortie :
@@ -174,6 +174,7 @@ Deux DAGS sont définis :
   3. partition_edges → création Silver
   4. export_gold_csv → création Gold
   5. trigger_load_neo4j_from_gold → déclenche le DAG 2 (chargement dans Neo4j)
+  
   (J’avais testé d’utiliser un ExternalTaskSensor pour attendre la fin du DAG précédent, mais c’était plus complexe à mettre en place et moins clair. J’ai préféré garder le TriggerDagRunOperator, qui est plus simple et fonctionne bien dans ce cas.)
 
 ### DAG 2 : `load_neo4j_from_gold.py`
@@ -247,14 +248,14 @@ Exemple de requêtes :
 ## Makefile disponible
 
 Raccourcis utiles :
- • make up → lance tous les services
- • make down → arête tous les services
- • make airflow → démarre Airflow
- • make neo4j → démarre Neo4j
- • make seed → génère les données brutes
- • make bronze → CSV → Parquet
- • make silver → partitionnement
- • make gold → export CSV Gold
+ - make up → lance tous les services
+ - make down → arête tous les services
+ - make airflow → démarre Airflow
+ - make neo4j → démarre Neo4j
+ - make seed → génère les données brutes
+ - make bronze → CSV → Parquet
+ - make silver → partitionnement
+ - make gold → export CSV Gold
 
 ## Conclusion
 
