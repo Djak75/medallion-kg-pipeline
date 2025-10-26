@@ -66,10 +66,10 @@ MEDAILLON-KG-PIPELINE/
 ## Scripts Python
 
 ### 1. `generate_sample_data.py`
-• Génère des données synthétiques :
+- Génère des données synthétiques :
   - `nodes.csv` : **id, label, name**
   - `edges.csv` : **src, dst, type**
-• Par défaut : **1 million de nœuds** et **5 millions d’arêtes**.
+- Par défaut : **1 million de nœuds** et **5 millions d’arêtes**.
 
 Exécution :
 
@@ -85,9 +85,9 @@ make seed
 ```
 
 ### 2. `to_parquet.py`
-• Convertit les CSV bruts en **Parquet**.
-• Entrées : `data/raw/nodes.csv`, `data/raw/edges.csv`
-• Sorties : `data/bronze/nodes.parquet`, `data/bronze/edges.parquet`
+- Convertit les CSV bruts en **Parquet**.
+- Entrées : `data/raw/nodes.csv`, `data/raw/edges.csv`
+- Sorties : `data/bronze/nodes.parquet`, `data/bronze/edges.parquet`
 
 Exécution :
 
@@ -103,9 +103,9 @@ make bronze
 ```
 
 ### 3. `gx_checkpoint.py`
-• Vérifie la qualité des données **Bronze** avec **Great Expectations (GX)** :
-• unicité de id dans nodes
-• src et dst non nuls dans edges
+- Vérifie la qualité des données **Bronze** avec **Great Expectations (GX)** :
+- unicité de id dans nodes
+- src et dst non nuls dans edges
 
 ```bash
 # Vérification manuelle
@@ -114,9 +114,9 @@ python quality/gx_checkpoint.py --nodes data/bronze/nodes.parquet --edges data/b
 (Pas dans le Makefile car utilisé diretement dans le DAG Airflow)
 
 ### 4. ``partition_edges.py
-• Partitionne les arêtes en ***N shards*** (par défaut 8).
-• Copie les nœuds sans modification.
-• Sortie :
+- Partitionne les arêtes en ***N shards*** (par défaut 8).
+- Copie les nœuds sans modification.
+- Sortie :
   - `data/silver/nodes.parquet`
   - `data/silver/shard=0/edges.parquet`, …, `shard=7/edges.parquet`
 
@@ -131,7 +131,7 @@ make silver
 ```
 
 ### 5. `export_gold_csv.py`
-• Exporte les fichiers Silver en ***CSV Gold*** au format attendu par Neo4j :
+- Exporte les fichiers Silver en ***CSV Gold*** au format attendu par Neo4j :
   - `nodes.csv` : **id:ID, name, :LABEL**
   - `edges.csv` : **:START_ID, :END_ID**
 
@@ -146,7 +146,7 @@ make gold
 ```
 
 ### 6. `load_neo4j_from_gold.py`
-• Charge les CSV Gold dans Neo4j via **Cypher** (en batch) :
+- Charge les CSV Gold dans Neo4j via **Cypher** (en batch) :
   - Création contrainte d’unicité sur **:Entity(id)**
   - MERGE des nœuds et arêtes
   - Évite les **doublons** si relancé
@@ -168,7 +168,7 @@ python scripts/load_neo4j_from_gold.py
 Deux DAGS sont définis :
 
 ### DAG 1 : `ingest_kg.py`
-• Tâches :
+- Tâches :
   1. bronze_to_parquet → conversion CSV → Parquet
   2. gx_checkpoint → contrôle qualité Bronze
   3. partition_edges → création Silver
@@ -177,7 +177,7 @@ Deux DAGS sont définis :
   (J’avais testé d’utiliser un ExternalTaskSensor pour attendre la fin du DAG précédent, mais c’était plus complexe à mettre en place et moins clair. J’ai préféré garder le TriggerDagRunOperator, qui est plus simple et fonctionne bien dans ce cas.)
 
 ### DAG 2 : `load_neo4j_from_gold.py`
-• Tâche unique qui charge les CSV Gold dans Neo4j:
+- Tâche unique qui charge les CSV Gold dans Neo4j:
   - load_neo4j → charge les fichiers Gold dans Neo4j
 
 
@@ -222,12 +222,12 @@ Accéder à l’UI Neo4j : http://localhost:7474
 ### Vérification dans Neo4j
 
 Exemple de requêtes :
-  • Compter les nœuds :
+  - Compter les nœuds :
   ```bash
   MATCH (n:Entity) RETURN count(n);
   ```
 
-  • Compter les arretes :
+  - Compter les arretes :
   ```bash
   MATCH ()-[r:REL]->() RETURN count(r);
   ```
@@ -263,107 +263,3 @@ Chaque étape (Bronze, Silver, Gold) est claire, contrôlée et reproductible.
 
 Le pipeline est extensible : il pourrait facilement intégrer d’autres contrôles de qualité, d’autres types de données, et une API pour exposer les résultats.
 Dans une étape ultérieure, j’aimerais explorer la partie **API** et l’**observabilité**, afin de rendre ce pipeline encore plus complet et proche d’un cas industriel.
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-# Architecture Médaillon x Graphes de connaissances
-
-Pipeline complet Bronze → Silver → Gold pour un Knowledge Graph à grande échelle.
-
-## Objectif
-
-- Structurer un projet data moderne en couches (Bronze → Silver → Gold)
-- Orchestrer avec Apache Airflow
-- Tracer la lignée avec OpenLineage/Marquez
-- Monitorer avec Prometheus + Grafana
-- Stocker & requêter en graphe avec Neo4j
-- Exposer via une API FastAPI
-
-## Stack & ports
-
-- Neo4j (7474 UI, 7687 Bolt)
-- Airflow (8080)
-- Marquez (5000)
-- Prometheus (9090)
-- Grafana (3000)
-- FastAPI (8000)
-
-## Layout
-
-projet/
-├── docker-compose.yaml
-├── .env
-├── Makefile
-├── README.md
-├── api/
-├── dags/
-├── data/{raw,bronze,silver,gold}
-├── scripts/
-├── quality/
-├── schema/
-├── lineage/
-└── grafana/
-
-
-
-
-
-
-## Structure du projet
-```bash
-projet/
-│
-├── api/
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   └── main.py                         # API Fast API
-│
-├── dags/
-│   └── ingest_kg.py                    # Pipeline Airflow
-│
-├── data/
-│   ├── raw/                            # Données générées
-│   ├── bronze/                         # Parquet brut
-│   ├── silver/                         # Parquet partitionné
-│   └── gold/                           # CSV pour Neo4j
-│
-├── scripts/
-│   ├── generate_sample_data.py         # Génération de données
-│   ├── to_parquet.py                   # Conversion CSV→Parquet
-│   ├── partition_edges.py              # Partitionnement
-│   └── neo4j_bulk_import.sh            # Import Neo4j
-│
-├── quality/
-│   └── gx_checkpoint.py                # Validation Great Expectations
-│
-├── schema/
-│   ├── neo4j-schema.cypher             # Contraintes Neo4j
-│   └── ontology.ttl                    # Ontologie RDF (optionnel)
-│
-├── lineage/
-│   └── openlineage.yml                 # Config OpenLineage
-│
-├── grafana/
-│   ├── prometheus.yml                  # Config Prometheus
-│   └── dashboards/                     # Dashboards Grafana
-│
-├── .env                                # Variables d'environnement
-├── .gitignore
-├── docker-compose.yaml                 # Services (Neo4j, Airflow, etc.)
-├── LICENSE
-├── Makefile                            # Commandes pratiques
-└── README.md
-```
